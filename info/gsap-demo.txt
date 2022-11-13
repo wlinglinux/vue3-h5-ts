@@ -1,0 +1,78 @@
+gsap.to(".elem", {
+ keyframes: [
+  {x: 100, duration: 1, ease: 'sine.out'}, // finetune with individual eases
+  {y: 200, duration: 1, delay: 0.5, onComplete: ()=> {} }, // create a 0.5 second gap
+  {rotation: 360, duration: 2, delay: -0.25} // overlap by 0.25 seconds
+ ],
+ ease: 'expo.inOut' // ease the entire keyframe block
+});
+
+{"keyframes":[{"x":100,"duration":1,"ease":"sine.out"},{"y":200,"duration":1,"delay":0.5},{"rotation":360,"duration":2,"delay":-0.25}],"ease":"expo.inOut"}
+
+const easeTween = gsap.to(".elem", {
+  keyframes: {
+    x: [0, 100, 100, 0, 0],
+    y: [0, 0, 100, 100, 0],
+    easeEach: 'none' // <- override the default keyframe ease
+  },
+  ease: "power4.inOut", // <- apply an ease to all the keyframes
+  duration: 5,
+  paused: true,
+});
+easeTween.play()
+
+{"keyframes":{"x":[0,100,100,0,0],"y":[0,0,100,100,0],"easeEach":"none"},"ease":"power4.inOut","duration":5,"paused":true}
+
+gsap.set("svg", { opacity: 1 });
+
+gsap.to(".ball", {
+  keyframes: {
+    "0%": { yPercent: 0, scaleX: 1, scaleY: 1 },
+    "7%": { yPercent: 5, scaleY: 0.9, scaleX: 1.1, ease: "sine.in" },
+    "25%": { yPercent: 100, scaleY: 1.15, scaleX: 0.9, ease: "sine.in" },
+    "50%": { yPercent: 500, scaleX: 1, scaleY: 1, ease: "none" },
+    "60%": { scaleX: 1.6, scaleY: 0.4, ease: "none" },
+    "65%": { yPercent: 500, scaleX: 1, scaleY: 1 },
+    "100%": { yPercent: 0, scaleX: 1, scaleY: 1 },
+    easeEach: "sine.out"
+  },
+  duration: 0.8,
+  repeat: -1,
+  transformOrigin: "center bottom"
+});
+ {
+  keyframes: {
+    "0%": { yPercent: 0, opacity: 0 },
+    "50%": { yPercent: 10, opacity: 0.5, ease: "sine.in" },
+    "100%": { yPercent: 0, opacity: 1, ease: "sine.in" },
+  },
+  duration: 0.2,
+  repeat: -1,
+  delay: 0
+}
+
+{"keyframes":{"0%":{"yPercent":0,"scaleX":1,"scaleY":1},"7%":{"yPercent":5,"scaleY":0.9,"scaleX":1.1,"ease":"sine.in"},"25%":{"yPercent":100,"scaleY":1.15,"scaleX":0.9,"ease":"sine.in"},"50%":{"yPercent":500,"scaleX":1,"scaleY":1,"ease":"none"},"60%":{"scaleX":1.6,"scaleY":0.4,"ease":"none"},"65%":{"yPercent":500,"scaleX":1,"scaleY":1},"100%":{"yPercent":0,"scaleX":1,"scaleY":1},"easeEach":"sine.out"},"duration":0.8,"repeat":-1,"transformOrigin":"center bottom"}
+
+gsap.to(".shadow", {
+  scale: 0.7,
+  duration: 0.4,
+  repeat: -1,
+  yoyo: true,
+  ease: "sine.inOut",
+  transformOrigin: "center"
+});
+
+{"scale":0.7,"duration":0.4,"repeat":-1,"yoyo":true,"ease":"sine.inOut","transformOrigin":"center"}
+
+gsap.to(".box", {
+  keyframes: {
+    y: [0, 80, -10, 30, 0],
+    ease: "none", // <- ease across the entire set of keyframes (defaults to the one defined in the tween, or "none" if one isn't defined there)
+    easeEach: "power2.inOut" // <- ease between each keyframe (defaults to "power1.inOut")
+  },
+  rotate: 180,
+  ease: "elastic", // <- the "normal" part of the tween. In this case, it affects "rotate" because it's outside the keyframes
+  duration: 5,
+  stagger: 0.2
+});
+{"keyframes":{"y":[0,80,-10,30,0],"ease":"none","easeEach":"power2.inOut"},"rotate":180,"ease":"elastic","duration":5,"stagger":0.2}

@@ -1,0 +1,10 @@
+触发报名:
+
+第一次放ext_1
+https://apib.hd.xxx.com/v1/feact/general?site_id=2048&ele_key=info&com_id=186d10f5-dd71-4d31-952d-66934b2def2c&ext_1=王者荣耀&ext_2=&ext_3=&ext_4=
+
+第二次放ext_2
+https://apib.hd.xxx.com/v1/feact/general?site_id=2048&ele_key=info&com_id=186d10f5-dd71-4d31-952d-66934b2def2c&ext_1=&ext_2=曹操,乔安娜,宫本武藏&ext_3=&ext_4=
+
+获取top100列表:
+https://apib.hd.xxx.com/v1/feinit/zwangzhe?site_id=2048

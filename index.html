@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" href="/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, viewport-fit=cover"/>
+    <link href="/css/animate.min.css?v=3" rel="stylesheet" type="text/css" />
+    <link href="/css/main.css?v=3" rel="stylesheet" type="text/css" />
+    <script src="/js/mobile-detect.min.js?v=11" type="text/javascript" charset="utf-8"></script>
+    <script src="/js/qs.min.js?v=12" type="text/javascript" charset="utf-8"></script>
+    <script src="/js/axios.min.js?v=12" type="text/javascript" charset="utf-8"></script>
+    <script src="/js/lodash.min.js?v=11" type="text/javascript" charset="utf-8"></script>
+    <script src="/js/mitt.umd.js?v=11" type="text/javascript" charset="utf-8"></script>
+    <title></title>
+    <style>
+      #loading-process {
+        position: absolute;
+        width: 100vw;
+        height: 100vh;
+        background-color: #fff;
+        /* background: linear-gradient(0deg, #EEEFED, #c8c5c2); */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+      #loading-process .load-wrapp {
+			  float: left;
+			  width: 25vw;
+			  height: 25vw;
+			  margin: 0 4vw 4vw 0;
+			  padding: 8vw 8vw 8vw;
+			  border-radius: 4vw;
+			  text-align: center;
+			  /* background-color: #d8d8d8; */
+			}
+			#loading-process .spinner {
+			  position: relative;
+			  width: 12vw;
+			  height: 12vw;
+			  margin: 0 auto;
+			}
+			#loading-process .load-9 {
+				margin-top: 12vw;
+			}
+			#loading-process .load-9 .spinner {
+			  animation: loadingI 2s linear infinite;
+			}
+			#loading-process .bubble-1,
+			#loading-process .bubble-2 {
+			  position: absolute;
+			  top: 0;
+			  width: 12vw;
+			  height: 12vw;
+			  border-radius: 100%;
+			  background-color: #4b9cdb;
+			}
+			
+			#loading-process .bubble-2 {
+			  top: auto;
+			  bottom: 0;
+			}
+			.load-9 .bubble-1,
+			.load-9 .bubble-2 {
+			  animation: bounce 2s ease-in-out infinite;
+			}
+			#loading-process .load-9 .bubble-2 {
+			  animation-delay: -1s;
+			}
+			@keyframes loadingI {
+			  100% {
+			    transform: rotate(360deg);
+			  }
+			}
+			@keyframes bounce {
+			  0%,
+			  100% {
+			    transform: scale(0);
+			  }
+			  50% {
+			    transform: scale(1);
+			  }
+			}
+    </style>
+  </head>
+  <body>
+    <div  id="loading-process">
+      <div class="load-wrapp">
+        <div class="load-9">
+          <div class="spinner">
+            <div class="bubble-1"></div>
+            <div class="bubble-2"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="app"></div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

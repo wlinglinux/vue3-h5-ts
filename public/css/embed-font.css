@@ -1,0 +1,42 @@
+@font-face {
+  font-family: 'FZLanTingHei-B-GBK';
+  font-style: normal;
+  font-weight: normal;
+  src: local('FZLanTingHei-B-GBK'), url('https://static.hd.xxx.com/upload/biz/1/FZLTZH_GBK_1.TTF') format('truetype');
+}
+
+@font-face {
+	font-family: 'HYZongYiJ';
+	src: url('https://static.hd.xxx.com/upload/biz/26/HYZongYiJ.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'JDLangZhengTi';
+	src: url('https://static.hd.xxx.com/upload/biz/1/JDLangZhengTiNew.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'WenYue-GuDianMingChaoTi-NC-W5';
+	src: url('https://static.hd.xxx.com/upload/biz/1/WenYue-GuDianMingChaoTi-NC-W5.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'fzlbjw';
+	src: url('https://static.hd.xxx.com/upload/biz/1/fzlbjw.ttf') format('opentype');
+}
+
+@font-face {
+  font-family: 'FZYaSong-BN-GBK-3';
+	src: url('https://static.hd.xxx.com/upload/biz/1/FZYaSongBNGBK_3.ttf') format('opentype');
+}
+@font-face {
+  font-family: 'FZYaSong-BN-GBK-7';
+	src: url('https://static.hd.xxx.com/upload/biz/1/FZYaSongBNGBK_7.ttf') format('opentype');
+}
+@font-face {
+  font-family: 'FZYaSong-BN-GBK';
+	src: url('https://static.hd.xxx.com/upload/biz/1/FZYaSongBNGBK8.TTF') format('opentype');
+}
+
+
+
